@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Darkbutton from '../components/Darkbutton';
+import awobaLogo from '../images/awoba-logo-transparent.png';
 
 class Header extends Component {
     state = {
@@ -23,17 +24,18 @@ class Header extends Component {
         return (
             <div className="nav-header bg-white shadow-xs border-0">
                 <div className="nav-top">
+                    <span>
+                        <img alt="" src={awobaLogo} className="woba-logo"/>
+                    </span>
                     <Link to="/"><span className="d-inline-block text-woba-primary fredoka-font ls-3 fw-600 font-xxl logo-text mb-0">A.W.O.B.A </span> </Link>
-                    <Link to="/defaultmessage" className="mob-menu ms-auto me-2 chat-active-btn"><i className="feather-message-circle text-grey-900 font-sm btn-round-md bg-greylight"></i></Link>
-                    <Link to="/defaultvideo" className="mob-menu me-2"><i className="feather-video text-grey-900 font-sm btn-round-md bg-greylight"></i></Link>
-                    <span onClick={this.toggleActive} className="me-2 menu-search-icon mob-menu"><i className="feather-search text-grey-900 font-sm btn-round-md bg-greylight"></i></span>
+                    <span onClick={this.toggleActive} className="me-2 menu-search-icon ms-auto mob-menu"><i className="feather-search text-grey-900 font-sm btn-round-md bg-greylight"></i></span>
                     <button onClick={this.toggleOpen} className={`nav-menu me-0 ms-2 ${buttonClass}`}></button>
                 </div>
                 
                 <form action="#" className="float-left header-search ms-3">
                     <div className="form-group mb-0 icon-input">
                         <i className="feather-search font-sm text-grey-400"></i>
-                        <input type="text" placeholder="Start typing to search.." className="bg-grey border-0 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg" />
+                        <input type="text" placeholder="Start typing to search.." className="bg-grey border-0 text-grey-500 lh-32 pt-2 pb-2 ps-5 pe-3 font-xssss fw-500 rounded-xl w350 theme-dark-bg" />
                     </div>
                 </form>
 
@@ -75,9 +77,8 @@ class Header extends Component {
                                 <div className="nav-caption fw-600 font-xssss text-grey-500"><span>New </span>Feeds</div>
                                 <ul className="mb-1 top-content">
                                     <li className="logo d-none d-xl-block d-lg-block"></li>
-                                    <li><Link to="/" className="nav-content-bttn open-font"><i className="feather-tv btn-round-md bg-woba-light-gray me-3 text-black"></i><span>Newsfeed</span></Link></li>
-                                    <li><Link to="/defaultbadge" className="nav-content-bttn open-font"><i className="feather-award btn-round-md bg-woba-light-gray me-3 text-black"></i><span>Badges</span></Link></li>
-                                    <li><Link to="/userpage" className="nav-content-bttn open-font"><i className="feather-user btn-round-md bg-woba-light-gray me-3 text-black"></i><span>Author Profile </span></Link></li>                        
+                                    <li><Link to="/" className="nav-content-bttn open-font"><i className="feather-rss btn-round-md bg-woba-light-gray me-3 text-black"></i><span>Newsfeed </span></Link></li>
+                                    <li><Link to="/defaultMember" className="nav-content-bttn open-font"><i className="feather-user btn-round-md bg-woba-light-gray me-3 text-black"></i><span>Friends </span></Link></li>
                                 </ul>
                             </div>
 
