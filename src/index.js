@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Badge from './pages/Badge';
 import Group from './pages/Group';
 import Member from './pages/Member';
-import Emailopen from './pages/Emailopen';
 import Settings from './pages/Settings';
 import Account from './pages/Account';
 import Contactinfo from './pages/Contactinfo';
@@ -16,7 +15,6 @@ import Socialaccount from './pages/Socialaccount';
 import Password from './pages/Password';
 import Payment from './pages/Payment';
 import Notification from './pages/Notification';
-import Helpbox from './pages/Helpbox';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Forgot from './pages/Forgot';
@@ -43,7 +41,6 @@ class Root extends Component{
 
                     <Route exact path={`${process.env.PUBLIC_URL}/defaultbadge`} component={Badge}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/defaultgroup`} component={Group}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultemailopen`} component={Emailopen}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/defaultsettings`} component={Settings}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/defaultvideo`} component={Videos}/>                    
                     
@@ -54,7 +51,6 @@ class Root extends Component{
                     <Route exact path={`${process.env.PUBLIC_URL}/password`} component={Password}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/defaultnoti`} component={Notification}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/helpbox`} component={Helpbox}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/register`} component={Register}/>
                     <Route exact path={`${process.env.PUBLIC_URL}/forgot`} component={Forgot}/>
