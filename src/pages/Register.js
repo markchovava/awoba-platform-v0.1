@@ -1,4 +1,6 @@
-import React, { Component , Fragment } from "react";
+import React, { Component, Fragment } from "react";
+//
+import wobaLogo from '../images/awoba-logo-transparent.png';
 
 
 class Register extends Component {
@@ -8,11 +10,12 @@ class Register extends Component {
                 <div className="main-wrap">
                     <div className="nav-header bg-transparent shadow-none border-0">
                         <div className="nav-top w-100">
-                            <a href="/"><i className="feather-zap text-success display1-size me-2 ms-0"></i><span className="d-inline-block fredoka-font ls-3 fw-600 text-current font-xxl logo-text mb-0">Sociala. </span> </a>
+                            <img alt="" src={wobaLogo} className="woba-logo"/>
+                            <a href="/"><span className="d-inline-block fredoka-font ls-3 fw-600 text-woba-primary font-xxl logo-text mb-0">A.W.O.B.A</span> </a>
                             <button className="nav-menu me-0 ms-auto"></button>
             
                             <a href="/login" className="header-btn d-none d-lg-block bg-dark fw-500 text-white font-xsss p-3 ms-auto w100 text-center lh-20 rounded-xl">Login</a>
-                            <a href="/register" className="header-btn d-none d-lg-block bg-current fw-500 text-white font-xsss p-3 ms-2 w100 text-center lh-20 rounded-xl">Register</a>
+                            <a href="/register" className="header-btn d-none d-lg-block bg-woba-primary fw-500 text-white font-xsss p-3 ms-2 w100 text-center lh-20 rounded-xl">Register</a>
                         </div>
                     </div>
 
@@ -51,7 +54,7 @@ class Register extends Component {
                                     
                                     <div className="col-sm-12 p-0 text-left">
                                         <div className="form-group mb-1"><a href="/register" className="form-control text-center style2-input text-white fw-600 bg-dark border-0 p-0 ">Register</a></div>
-                                        <h6 className="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Already have account <a href="/login" className="fw-700 ms-1">Login</a></h6>
+                                        <h6 className="text-grey-500 font-xsss fw-500 mt-0 mb-0 lh-32">Already have account <a href="/login" className="fw-700 ms-1 text-woba-primary">Login</a></h6>
                                     </div>
                                     
                                 </div>
