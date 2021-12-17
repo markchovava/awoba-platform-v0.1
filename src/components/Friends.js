@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 const friendList = [
     {
@@ -37,10 +37,7 @@ class Friends extends Component {
                         <a href="/defaultmember" className="p-2 lh-20 w100 bg-grey text-grey-800 text-center font-xssss fw-600 ls-1 rounded-xl">Delete</a>
                     </div>
                 </div>
-
                 ))}
-
-                
             </div>
         );
     }
