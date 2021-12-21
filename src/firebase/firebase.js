@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 
 //firebase app config
 const appConfig = {
-    apiKey: "AIzaSyDpbXUqExRS_Iv2YF1qjlqtsU9ldlDSR4k",
-    authDomain: "awoba-platform.firebaseapp.com",
-    projectId: "awoba-platform",
-    storageBucket: "awoba-platform.appspot.com",
-    messagingSenderId: "330500501210",
-    appId: "1:330500501210:web:df3c38bc4d61ed7f263fe3"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_STORAGE_APP_ID,
 };
 
 //initialize app
