@@ -1,17 +1,10 @@
 //React
-import React, { Fragment, useState } from 'react';
-
-//firebase app
-import { app } from '../firebase/firebase.js';
+import React, { Fragment } from 'react';
 
 //logo
 import wobaLogo from '../images/awoba-logo-transparent.png';
 
 const Register = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
 
     return (
         <Fragment> 
@@ -42,7 +35,6 @@ const Register = () => {
                                             type="text"
                                             className="style2-input ps-5 form-control text-grey-900 font-xsss fw-600"
                                             placeholder="Your Name"
-                                            onChange={ e => setName(e.target.value) }
                                         />                        
                                     </div>
                                     <div className="form-group icon-input mb-3">
