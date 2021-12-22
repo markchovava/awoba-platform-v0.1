@@ -19,7 +19,7 @@ class ProfilecardTwo extends Component {
                     <div className="d-flex align-items-center justify-content-center position-absolute right-15 top-10 mt-2 me-2">
                         <a href="/defaultmember" className="d-none d-lg-block bg-success p-3 z-index-1 rounded-3 text-white font-xsssss text-uppercase fw-700 ls-3">Add Friend</a>
                         <a href="/defaultemailbox" className="d-none d-lg-block bg-greylight btn-round-lg ms-2 rounded-3 text-grey-700"><i className="feather-mail font-md"></i></a>
-                        <a href="/home" id="dropdownMenu8" className="d-none d-lg-block btn-round-lg ms-2 rounded-3 text-grey-700 bg-greylight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-more font-md"></i></a>
+                        <a href="/home" id="dropdownMenu8" className="d-none d-lg-block btn-round-lg ms-2 rounded-3 text-grey-700 bg-greylight" data-toggle="dropdown" aria-expanded="false"><i className="ti-more font-md"></i></a>
                         <div className="dropdown-menu dropdown-menu-end p-4 rounded-xxl border-0 shadow-lg" aria-labelledby="dropdownMenu8">
                             <div className="card-body p-0 d-flex">
                                 <i className="feather-bookmark text-grey-500 me-3 font-lg"></i>

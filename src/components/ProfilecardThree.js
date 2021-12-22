@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 class ProfilecardThree extends Component {
     render() {
@@ -11,7 +11,7 @@ class ProfilecardThree extends Component {
                     <div className="d-flex align-items-center justify-content-center position-absolute-md right-15 top-0 me-2">
                         <a href="/defaultmember" className="d-none d-lg-block bg-success p-3 z-index-1 rounded-3 text-white font-xsssss text-uppercase fw-700 ls-3">Add Friend</a>
                         <a href="/defaultemailbox" className="d-none d-lg-block bg-greylight btn-round-lg ms-2 rounded-3 text-grey-700"><i className="feather-mail font-md"></i></a>
-                        <a href="/home" id="dropdownMenu4" className="d-none d-lg-block bg-greylight btn-round-lg ms-2 rounded-3 text-grey-700" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-more font-md tetx-dark"></i></a>
+                        <a href="/home" id="dropdownMenu4" className="d-none d-lg-block bg-greylight btn-round-lg ms-2 rounded-3 text-grey-700" data-toggle="dropdown" aria-expanded="false"><i className="ti-more font-md tetx-dark"></i></a>
                         <div className="dropdown-menu dropdown-menu-end p-4 rounded-xxl border-0 shadow-lg" aria-labelledby="dropdownMenu4">
                             <div className="card-body p-0 d-flex">
                                 <i className="feather-bookmark text-grey-500 me-3 font-lg"></i>
