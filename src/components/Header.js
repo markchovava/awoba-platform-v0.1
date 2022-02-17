@@ -27,7 +27,7 @@ class Header extends Component {
                     <span>
                         <img alt="" src={awobaLogo} className="woba-logo"/>
                     </span>
-                    <Link to="/"><span className="d-inline-block text-woba-primary fredoka-font ls-3 fw-600 font-xxl logo-text mb-0">A.W.O.B.A </span> </Link>
+                    <Link to="/"><span className="d-inline-block text-woba-primary logo-text-space fredoka-font ls-3 fw-600 font-xxl logo-text mb-0">AWOBA</span> </Link>
                     <span onClick={this.toggleActive} className="me-2 menu-search-icon ms-auto mob-menu"><i className="feather-search text-grey-900 font-sm btn-round-md bg-greylight"></i></span>
                     <button onClick={this.toggleOpen} className={`nav-menu me-0 ms-2 ${buttonClass}`}></button>
                 </div>

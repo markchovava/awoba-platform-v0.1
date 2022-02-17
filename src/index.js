@@ -30,6 +30,8 @@ import Userpage from './pages/Userpage';
 import Authorpage from './pages/Authorpage';
 
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
+import AuthRoute from './AuthRoute/AuthRoute';
+import { AuthProvider } from './Contexts/AuthContext';
 import * as serviceWorker from './serviceWorker';
 
 class Root extends Component{
@@ -37,31 +39,33 @@ class Root extends Component{
         return(
             <BrowserRouter basename={'/'}>
                 <Switch>
-                    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}/>
+                    <AuthProvider>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/home`} component={Home}/>
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultbadge`} component={Badge}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultgroup`} component={Group}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultsettings`} component={Settings}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultvideo`} component={Videos}/>                    
-                    
-                    <Route exact path={`${process.env.PUBLIC_URL}/accountinformation`} component={Account}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultmember`} component={Member}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/contactinformation`} component={Contactinfo}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/socialaccount`} component={Socialaccount}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/password`} component={Password}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultnoti`} component={Notification}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/register`} component={Register}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/forgot`} component={Forgot}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/notfound`} component={Notfound}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultbadge`} component={Badge}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultgroup`} component={Group}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultsettings`} component={Settings}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultvideo`} component={Videos}/>                    
+                        
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/accountinformation`} component={Account}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultmember`} component={Member}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/contactinformation`} component={Contactinfo}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/socialaccount`} component={Socialaccount}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/password`} component={Password}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/payment`} component={Payment}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultnoti`} component={Notification}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/register`} component={Register}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/forgot`} component={Forgot}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/notfound`} component={Notfound}/>
 
-                    <Route exact path={`${process.env.PUBLIC_URL}/defaultmessage`} component={Chat}/>
-                    
-                    <Route exact path={`${process.env.PUBLIC_URL}/grouppage`} component={Grouppage}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/userpage`} component={Userpage}/>
-                    <Route exact path={`${process.env.PUBLIC_URL}/authorpage`} component={Authorpage}/>  
-                    <Route exact path={`${process.env.PUBLIC_URL}/comingsoon`} component={Comingsoon}/>                      
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultmessage`} component={Chat}/>
+                        
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/grouppage`} component={Grouppage}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/userpage`} component={Userpage}/>
+                        <AuthRoute exact path={`${process.env.PUBLIC_URL}/authorpage`} component={Authorpage}/>  
+                        <Route exact path={`${process.env.PUBLIC_URL}/comingsoon`} component={Comingsoon}/>
+                    </AuthProvider>                    
                 </Switch>
             </BrowserRouter>
         )

@@ -19,7 +19,20 @@
   background-image: url(../images/preloader.svg);
   background-size: 80px;
 }
-
+.pointer:hover {
+  cursor: pointer;
+}
+.pointer-progress:hover {
+  cursor: wait ;
+}
+.click-zero {
+  pointer-events: none;
+}
+.alert-register {
+  margin-top: 20px;
+  margin-right: 65px;
+  z-index: 100;
+}
 .box {
   position: relative;
   width: 100%;
@@ -29,10 +42,13 @@
   background: transparent;
 }
 .woba-logo {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   padding-left: 5px;
   padding-right: 5px;
+}
+.logo-text-space {
+  letter-spacing: 10px;
 }
 .box .lines {
   position: absolute;
@@ -12601,6 +12617,7 @@ strong,
 .nav-header .nav-top a .logo-text {
   line-height: 90px;
   transition: all 0.4s ease;
+  letter-spacing: 8px;
 }
 @media (max-width: 991.98px) {
   .nav-header .nav-top a {
@@ -12615,6 +12632,7 @@ strong,
   .nav-header .nav-top a .logo-text {
     line-height: 28px;
     font-size: 24px !important;
+    letter-spacing: 4px;
   }
 }
 .nav-header .nav-menu {
