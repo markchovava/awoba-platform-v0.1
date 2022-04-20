@@ -27,7 +27,7 @@ class Header extends Component {
                     <span>
                         <img alt="" src={awobaLogo} className="woba-logo"/>
                     </span>
-                    <Link to="/"><span className="d-inline-block text-woba-primary logo-text-space fredoka-font ls-3 fw-600 font-xxl logo-text mb-0">AWOBA</span> </Link>
+                    <Link to="/home"><span className="d-inline-block text-woba-primary logo-text-space fredoka-font ls-3 fw-600 font-xxl logo-text mb-0">AWOBA</span> </Link>
                     <span onClick={this.toggleActive} className="me-2 menu-search-icon ms-auto mob-menu"><i className="feather-search text-grey-900 font-sm btn-round-md bg-greylight"></i></span>
                     <button onClick={this.toggleOpen} className={`nav-menu me-0 ms-2 ${buttonClass}`}></button>
                 </div>
@@ -39,7 +39,7 @@ class Header extends Component {
                     </div>
                 </form>
 
-                <Link to="/" className="p-2 ms-3 ms-auto menu-icon"><i className="feather-home font-xl text-woba-secondary"></i></Link>
+                <Link to="/home" className="p-2 ms-3 ms-auto menu-icon"><i className="feather-home font-xl text-woba-secondary"></i></Link>
                 <Link to="/defaultMember" className="p-2 ms-3 menu-icon"><i className="feather-user font-xl text-woba-secondary"></i></Link>
                 <span className={`p-2 pointer text-center ms-3 menu-icon ${notiClass}`} id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false" onClick={this.toggleisNoti}><span className="dot-count bg-warning"></span><i className="feather-bell font-xl text-woba-secondary"></i></span>
                 <div className={`dropdown-menu p-4 right-0 rounded-xxl border-0 shadow-lg ${notiClass}`} aria-labelledby="dropdownMenu3">

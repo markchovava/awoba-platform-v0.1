@@ -18,7 +18,7 @@ export const AuthProvider = ({children}) => {
     );
 
     // todo: sign in user to existing account
-    const signIn =  (email, password) => (
+    const signIn = (email, password) => (
         auth.signInWithEmailAndPassword(email, password)
     );
 

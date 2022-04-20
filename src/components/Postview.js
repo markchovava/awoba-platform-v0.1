@@ -39,7 +39,7 @@ class Postview extends Component {
                 {postimage ?
                 <div className="card-body d-block p-0 mb-3">
                     <div className="row ps-2 pe-2">
-                        <div className="col-sm-12 p-1"><img src={`assets/images/${postimage}`} className="rounded-3 w-100" alt="post" /></div>                                        
+                        <div className="col-sm-12 p-1"><img src={postimage} className="rounded-3 w-100" alt="post" /></div>                                        
                     </div>
                 </div>
                 : ''}

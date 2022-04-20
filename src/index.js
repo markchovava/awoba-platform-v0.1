@@ -32,6 +32,7 @@ import Authorpage from './pages/Authorpage';
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import AuthRoute from './AuthRoute/AuthRoute';
 import { AuthProvider } from './Contexts/AuthContext';
+import { GlobalContext } from './Contexts/GlobalContext';
 import * as serviceWorker from './serviceWorker';
 
 class Root extends Component{
@@ -40,6 +41,7 @@ class Root extends Component{
             <BrowserRouter basename={'/'}>
                 <Switch>
                     <AuthProvider>
+                        <GlobalContext>
                         <AuthRoute exact path={`${process.env.PUBLIC_URL}/home`} component={Home}/>
 
                         <AuthRoute exact path={`${process.env.PUBLIC_URL}/defaultbadge`} component={Badge}/>
@@ -65,6 +67,7 @@ class Root extends Component{
                         <AuthRoute exact path={`${process.env.PUBLIC_URL}/userpage`} component={Userpage}/>
                         <AuthRoute exact path={`${process.env.PUBLIC_URL}/authorpage`} component={Authorpage}/>  
                         <Route exact path={`${process.env.PUBLIC_URL}/comingsoon`} component={Comingsoon}/>
+                        </GlobalContext>
                     </AuthProvider>                    
                 </Switch>
             </BrowserRouter>

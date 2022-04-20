@@ -1,30 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-//firebase
+// firebase
+import { storage, db, firebase } from '../firebase/firebase';
 import { useAuth } from '../Contexts/AuthContext';
-import { db } from '../firebase/firebase';
+import { useGlobalContext } from '../Contexts/GlobalContext';
 
-const Createpost = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [name, setName] = useState('');
+const Createpost = ({ name }) => {
+    const [selectedImage, setSelectedImage] = useState('');
     const [caption, setCaption] = useState('');
+    const { getUploadErr } = useGlobalContext();
     const { user } = useAuth();
 
-    useEffect(() => {
-        db.collection("awobaMembers").where("memberId", "==", user.uid)
-        .get()
-        .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                setName(doc.data().name);
+    //create image storage ref
+    const imageRef = storage.ref(`images/${selectedImage.name}`);
+
+    // upload ref (promise) - upload selected image
+    const uploadTask = imageRef.put(selectedImage);
+
+    //todo: handle upload button
+    const handleUploadPost = async () => {
+        // on upload
+        uploadTask.task.on("state_changed", (snapshot) => {
+            //var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            //snapshot.state === "RUNNING" && console.log(`Upload is ${progress}% done!`);
+        },
+        (err) => getUploadErr(err.message),
+        // upload completed!
+        async () => {
+            const downloadURL = await uploadTask.ref.getDownloadURL();
+            db.collection("posts").add({
+                postOwnerId: user.uid,
+                date: firebase.firestore.Timestamp.now(),
+                postImage: downloadURL,
+                description: caption,
             });
-        })
-        .catch((err) => err);
-    });
-
-    name && console.log(name)
-    const handleUploadPost = () => {
-
+        }
+        );
+    console.log("Done");
     };
 
     return (
@@ -68,7 +80,7 @@ const Createpost = () => {
                 )}
                 <label for="image-upload" className="text-grey-500 pointer">
                     <strong>
-                        <i className="feather-image font-sm text-success me-2"></i>Attach image
+                        <i className="feather-image font-sm text-success me-2"></i>Click me to attach image!
                     </strong>
                     <br/>
                     <input
